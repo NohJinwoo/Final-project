@@ -1,4 +1,4 @@
-package com.style.controller;
+package com.saeyan.controller;
 
 import java.io.IOException;
 
