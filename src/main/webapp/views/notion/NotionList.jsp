@@ -10,7 +10,7 @@
 <link rel="stylesheet" type="text/css" href="css/notion.css">
 <link rel="stylesheet" href="css/Main.css">
 <!-- header 불러오기 -->
-<%@include file ="../views/header.jsp" %>
+<%@include file ="../header.jsp" %>
 </head>
 <body>
 <div id="wrap" align="center">
@@ -18,7 +18,7 @@
 
 <table class="list">
 <tr>
-<td colspan="5" style="border: white; text-align: right">
+<td colspan="6" style="border: white; text-align: right">
 <a href="NotionServlet?command=notion_write_form"> 게시글 등록 </a>
 </td>
 </tr>
@@ -27,6 +27,7 @@
 <tr class="record">
 <td>${notion.nno}</td>
 <td>
+<!--  게시글 상세보기 페이지로 이동 -->
 <a href="NotionServlet?command=notion_view&nno=${notion.nno}">
 ${notion.ntitle }
 </a>

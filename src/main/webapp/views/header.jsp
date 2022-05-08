@@ -13,10 +13,12 @@
 	
 	<div class="wrap">
 		<div class="top_area" >
+			
 			<div class="logo_area">
-			<a href="index.jsp">
-				</a>
+		 <a href="index.jsp">
+			
 		 <img src="images/Logo.png" >
+				</a>
 			</div>
 			
 			<div class="search">
@@ -39,13 +41,10 @@
 		<!-- 네비바 -->
       <nav class="navi_bar_area">
         <ul class="clearfix">
-          <li><a class="menuLink" href="#"></a></li> <!--""<-여기 부분에 URL 작성하면 됨-->
-          <li><a class="menuLink" href="#">Best</a></li> <!--""<-여기 부분에 URL 작성하면 됨-->
           <li><a class="menuLink" href="#">Bag</a></li>
           <li><a class="menuLink" href="#">Shose</a></li>
           <li><a class="menuLink" href="#">jewelry</a></li>
           <li><a class="menuLink" href="#">.etc</a></li>
-          <li><a class="menuLink" href="#"></a></li>
       </ul>
     </nav>
     </div>

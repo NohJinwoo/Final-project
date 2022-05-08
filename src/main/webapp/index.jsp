@@ -9,6 +9,7 @@
 <!-- 부트스트랩은 반응형 웹 -->
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>쇼핑몰</title>
+<script type="text/javascript" src="script/notion.js"></script>
 <!-- 부트스트랩 CSS추가하기 -->
 <link rel="stylesheet" href="css/bootstrap.min.css">
 
