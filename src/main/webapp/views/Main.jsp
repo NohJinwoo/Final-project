@@ -71,6 +71,16 @@
         <p>Pink Bag</p>
         <p class="price">79,000</p>
       </a>
+        <a href="#">
+        <img src="images/2.jpg">
+        <p>Pink Bag</p>
+        <p class="price">79,000</p>
+      </a>
+        <a href="#">
+        <img src="images/2.jpg">
+        <p>Pink Bag</p>
+        <p class="price">79,000</p>
+      </a>
 		</div>
 	</div>
 
