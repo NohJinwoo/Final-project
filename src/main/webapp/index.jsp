@@ -15,20 +15,15 @@
 
 </head>
 <body>
-
+<a href="main.do"></a>
 <!-- main페이지 불러오기 -->
 	<%@include file ="views/Main.jsp" %>
 <!-- 제이쿼리 자바스크립트 추가하기 -->
-	<script src="js/jquery.min.js">
-		
-	</script>
+	<script src="js/jquery.min.js"></script>
 	<!-- 파퍼 자바스크립트 추가하기 -->
-	<script src="js/popper.js">
-		
-	</script>
+	<script src="js/popper.js"></script>
 	<!-- 부트스트랩 자바스크립트 추가하기 -->
-	<script src="js/bootstrap.min.js">
-		
-	</script>
+	<script src="js/bootstrap.min.js"></script>
+	
 </body>
 </html>

@@ -1,4 +1,4 @@
-package com.saeyan.controller;
+package com.style.controller;
 
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.saeyan.dao.MemberDAO;
-import com.saeyan.dto.MemberVO;
+import com.style.dao.MemberDAO;
+import com.style.dto.MemberVO;
 
 /**
  * Servlet implementation class LoginServlet
@@ -19,18 +19,22 @@ import com.saeyan.dto.MemberVO;
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
+	public LoginServlet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 //		response.getWriter().append("Served at: ").append(request.getContextPath());
-		String url = "member/Login.jsp";
+		String url = "views/login.jsp";
 		
 		HttpSession session = request.getSession();
 		
-		if(session.getAttribute("loginUser") != null) {//이미 로그인 된 사용자이면
-			url = "Main.jsp"; //메인 페이지로 이동한다.
+		if(session.getAttribute("LoginUser") != null) {//이미 로그인 된 사용자이면
+			url = "main.do"; //메인 페이지로 이동한다.
 		}
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
@@ -38,20 +42,19 @@ public class LoginServlet extends HttpServlet {
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "member/Login.jsp";
+		String url = "views/login.jsp";
 		
-		String userid = request.getParameter("userid");
-		String pwd = request.getParameter("pwd");
-		
+		String mem_id = request.getParameter("mem_id");
+		String mem_pw = request.getParameter("mem_pw");
 		MemberDAO mDao = MemberDAO.getInstance();
-		int result = mDao.userCheck(userid, pwd);
-		
+		int result = mDao.userCheck(mem_id, mem_pw);
+				
 		if(result==1) {
-			MemberVO mVo = mDao.getMember(userid);
+			MemberVO mVo = mDao.getUser(mem_id);
 			HttpSession session = request.getSession();
-			session.setAttribute("loginUser", mVo);
-			request.setAttribute("message", "회원 가입에 성공했습니다.");
-			url = "Main.jsp";
+			session.setAttribute("LoginUser", mVo);
+			request.setAttribute("message", "로그인에 성공했습니다.");
+			url = "main.do";
 		} else if (result==0) {
 			request.setAttribute("message", "비밀번호가 맞지 않습니다.");
 		} else if (result==-1) {
@@ -60,5 +63,5 @@ public class LoginServlet extends HttpServlet {
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 		dispatcher.forward(request, response);
-	}
+		}	
 }

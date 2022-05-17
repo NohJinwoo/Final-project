@@ -1,42 +1,45 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <!-- header 불러오기 -->
+<%@include file ="header.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="../css/login.css">
-<!-- 부트스트랩은 반응형 웹 -->
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="css/login.css">
+<link rel="stylesheet" href="css/Main.css">
+
 <title>쇼핑몰</title>
-<!-- 부트스트랩 CSS추가하기 -->
-<link rel="stylesheet" href="../css/bootstrap.min.css">
 
 <title>Login page</title>
 </head>
-	<!-- header 불러오기 -->
-	<%@include file ="header.jsp" %>
+
 <body>
-   	
    		<div class="login-wrapper">
    		
 <section class="login-form">
 <h1>Login</h1>
-<form action="">
+<form action="login.do" method="post" name="frm">  
 	<div class="int area">
-			<input type="text" name="id" autocomplete="off" required>
+			<input type="text" name="mem_id" id="id" value="${mem_id}" autocomplete="off" required>
 			<label for="id">USER NAME</label>
 	</div>
 	<div class="int-area">
-		<input id="password" name="pw" id="pw" autocomplete="off" required>
+		<input type="password" name="mem_pw" id="pw" autocomplete="off" required>
 			<label for="pw">PASSWORD</label>
 		</div>
 		<div class="btn-area">
-		<button id="btn" type="submit">Login</button>
+		<input type="submit" value="로그인">&nbsp;&nbsp;
+		<input type="reset" value="취소">&nbsp;&nbsp;
+		<input type="button" value="관리자" onclick="location.href='admin.do'">
+		</div>
+		<div class="alter-area">
+		${message}
 		</div>
 </form>
 <div class="caption">
-<a href="">Forget Password?</a>
-<a href="">회원가입</a>
+<a href="findid.do">Forget Password?</a>
+<a href="signup.do">회원가입</a>
 </div>
 </section>
 

@@ -20,14 +20,12 @@ body {
   background-color:#FFFFFF;
   text-align:center;
   margin:0 auto;
-  margin-top:10%;
-
-	
+  margin-top:10%;	
 }
 
-.joinForm h2 {
+.signup-form h2 {
   text-align: center;
-  margin: 30px;
+  margin-bottom: 30px;
 }
 
 .textForm {
@@ -88,6 +86,26 @@ body {
 }
 
 .cellphoneNo {
+  width: 100%;
+  border:none;
+  outline:none;
+  color: #636e72;
+  font-size:16px;
+  height:25px;
+  background: none;
+}
+
+.addr {
+  width: 100%;
+  border:none;
+  outline:none;
+  color: #636e72;
+  font-size:16px;
+  height:25px;
+  background: none;
+}
+
+.detailaddr {
   width: 100%;
   border:none;
   outline:none;

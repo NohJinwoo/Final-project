@@ -55,8 +55,7 @@ body{
     height: 70px;
     top:30%;
 }
-.search input {
-	
+.search input {	
 	width:80%;
 	border-radius: 20px;
 	border: 1px solid #bbb;
@@ -146,17 +145,18 @@ products{
 	margin-bottom: 20px;
 	text-align: center;
 }
+
 .main_img{
 	height: 100%;
  	width: 95%;
 }
+
 h1{
 	text-align: center;
 	width: 100%;
 	font-size: 24px;
 	font-style: bolder;
 	color: #545454;
-  
 }
 /* 홈페이지 메인 제품 목록  */
 
