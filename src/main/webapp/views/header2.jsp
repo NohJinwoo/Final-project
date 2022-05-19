@@ -21,15 +21,16 @@
 			<div class="logo_area">
 			<a href="index.jsp">
 				</a>
-		 <img src="images/Logo.png" >
+		 <img src="<%=request.getContextPath() %>/images/Logo.png"/>
 			</div>
 			
 			<div class="search">
 			<div class="search-box">
-		  <input type="text" placeholder="검색어 입력">
-  		<a class="search-btn" href="#">
-  		</a>
-  		</div>
+		    	<form  name="frm_search" role="search" method="get" class="search-form" >
+                <input type="search" class="search-field" placeholder="상품명" value="${param.findStr }" name="findStr" />
+               <input type="hidden" name="search" value="select">
+                 </form>
+  			</div>
   			</div>
 			
 			<div class="login_area">
@@ -44,11 +45,11 @@
       <nav class="navi_bar_area">
         <ul class="clearfix">
           <li><a class="menuLink" href="#"></a></li> <!--""<-여기 부분에 URL 작성하면 됨-->
-          <li><a class="menuLink" href="#">Best</a></li> <!--""<-여기 부분에 URL 작성하면 됨-->
-          <li><a class="menuLink" href="#">Bag</a></li>
-          <li><a class="menuLink" href="#">Shoes</a></li>
-          <li><a class="menuLink" href="#">jewelry</a></li>
-          <li><a class="menuLink" href="#">.etc</a></li>
+          <li><a class="menuLink" href="javascript:Best();">Best</a></li> <!--""<-여기 부분에 URL 작성하면 됨-->
+          <li><a class="menuLink" href="javascript:Bag();">Bag</a></li>
+          <li><a class="menuLink" href="javascript:Shoes();">Shoes</a></li>
+          <li><a class="menuLink" href="javascript:Jewelry();">Jewelry</a></li>
+          <li><a class="menuLink" href="javascript:etc();">etc</a></li>
           <li><a class="menuLink" href="#"></a></li>
       </ul>
     </nav>

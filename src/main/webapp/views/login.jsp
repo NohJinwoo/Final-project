@@ -38,7 +38,8 @@
 		</div>
 </form>
 <div class="caption">
-<a href="findid.do">Forget Password?</a>
+<a href="findid.do">Forget ID?</a>
+<a href="findpw.do">Forget Password?</a>
 <a href="signup.do">회원가입</a>
 </div>
 </section>

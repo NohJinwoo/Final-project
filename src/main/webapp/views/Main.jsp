@@ -24,7 +24,7 @@
     
 		<div class="content_area">
 
-			<div class="products">
+			<div class="products" id="product_list">
       <a href="#">
         <img src="images/1.jpg">
         <p>Sunglasses</p>
@@ -75,6 +75,7 @@
         <p>Pink Bag</p>
         <p class="price">79,000</p>
       </a>
+      <%--jsp:include page="../product_index/phone.jsp"/--%>
 		</div>
 	</div>
 

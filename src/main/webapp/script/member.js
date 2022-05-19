@@ -89,8 +89,26 @@ function joinCheck() {
 
 function idSearch() { 
 	 	if (document.frm.mem_name.value.length < 1) {
-		  alert("이름을 입력해주세요");
+		  alert("이름을 입력해주세요.");
 		  document.frm.mem_name.focus();
+		  return;
+		 }
+
+		 if (document.frm.mem_phone.value.length != 11) {
+			  alert("핸드폰번호를 정확하게 입력해주세요.");
+			  document.frm.mem_phone.focus();
+	    return;
+		 }
+
+		 frm.method = "get";
+		 frm.action = "findidresult.do"; //넘어간화면
+	 	 frm.submit();
+}
+
+function pwSearch() { 
+	 	if (document.frm.mem_id.value.length < 4) {
+		  alert("아이디는 4글자 이상이어야 합니다.");
+		  document.frm.mem_id.focus();
 		  return;
 		 }
 
@@ -101,6 +119,6 @@ function idSearch() {
 		 }
 
 		 frm.method = "get";
-		 frm.action = "findidresult.do"; //넘어간화면
+		 frm.action = "findpwresult.do"; //넘어간화면
 	 	 frm.submit();
 }

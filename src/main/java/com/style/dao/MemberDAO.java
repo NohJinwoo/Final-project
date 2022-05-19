@@ -317,4 +317,39 @@ public class MemberDAO {
 		}
 		return mem_id;
 	}
+	
+	public String findPw(String mem_id, String mem_phone) {
+		String mem_pw = null;
+		String sql = "select mem_pw from ezen_member where mem_id=? and mem_phone=?";
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		try {
+			conn = getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, mem_id);
+			pstmt.setString(2, mem_phone);			
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				mem_pw = rs.getString("mem_pw");
+				}
+			
+				
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (rs != null)
+					rs.close();
+				if (pstmt != null)
+					pstmt.close();
+				if (conn != null)
+					conn.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return mem_pw;
+	}
 }
